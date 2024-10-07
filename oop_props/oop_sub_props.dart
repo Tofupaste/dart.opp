@@ -1,7 +1,29 @@
-import 'oop_main_props.dart';
+class Niigo {
+  String name;
+  int age;
+  String ship;
 
-void main() {
-  var niigo = new Niigo('Enanan', 16, 'Amiya');
+  Niigo(this.name, this.age, this.ship);
 
-  niigo.dance();
+  void luv() {
+    print('$name is fall in luv with $ship.');
+  }
+  void friendship(Leoneed leoneed) {
+    print('$name is friend with ${leoneed.name}');
+  }
+}
+
+class Leoneed {
+  String name;
+  int age;
+  String ship;
+
+  Leoneed(this.name, this.age, this.ship);
+
+  void luv() {
+    print('$name is fall in luv with $ship.');
+  }
+  void friendship(Niigo niigo) {
+    print('$name is friend with ${niigo.name}');
+  }
 }

@@ -1,29 +1,10 @@
-class Niigo {
-  String name;
-  int age;
-  String ship;
+import 'oop_sub_props.dart';
 
-  Niigo(this.name, this.age, this.ship);
-
-  void dance() {
-    print('$name is dancing with $ship.');
-  }
-  void friendship(leoneed leoneed) {
-    print('$name is friend with ${leoneed.name}');
-  }
-}
-
-class leoneed {
-  String name;
-  int age;
-  String ship;
-
-  leoneed(this.name, this.age, this.ship);
-
-  void dance() {
-    print('$name is dancing with $ship.');
-  }
-  void friendship(Niigo niigo) {
-    print('$name is friend with ${niigo.name}');
-  }
+void main() {
+  var niigo = new Niigo('Amiya', 16, 'Enanan');
+  var leoneed = new Leoneed('Saki', 16, 'Ichika');
+  leoneed.luv();
+  niigo.luv();
+  leoneed.friendship(niigo);
+  niigo.friendship(leoneed);
 }
