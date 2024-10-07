@@ -10,6 +10,9 @@ class Person {
   void showAge() {
     print("Age: ${this.age}");
   }
+  void kiss(Person2 person2) {
+    print("${this.name} chan Deep kissed ${person2.name} chan");
+  }
 }
 
 class Person2 {
@@ -21,6 +24,9 @@ class Person2 {
   }
   void showAge() {
     print ("Age: ${this.age}");
+  }
+  void hug(Person person) {
+    print ("${this.name} chan hugged ${person.name} chan");
   }
 }
 
@@ -36,4 +42,7 @@ void main() {
   person2.showAge();
 
   print('${person.name} chan really in luv with ${person2.name} chan');
+  person2.hug(person);
+  person.kiss(person2);
 }
+
