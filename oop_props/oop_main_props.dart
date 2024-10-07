@@ -2,7 +2,7 @@ import 'oop_sub_props.dart';
 
 void main() {
   var niigo = new Niigo('Amiya', 16, 'Enanan');
-  var leoneed = new Leoneed('Saki', 16, 'Ichika');
+  var leoneed = new Leoneed('Saki', 16, 'Icchan');
   leoneed.luv();
   niigo.luv();
   leoneed.friendship(niigo);
