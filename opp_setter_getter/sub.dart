@@ -1,6 +1,6 @@
 class Zutomayo {
   String _name;
-  int _age;
+  int? _age;
   String _genre;
   String favsong;
 
@@ -13,19 +13,23 @@ class Zutomayo {
   }
 
   // Getter for _age
-  int get age => _age;
+  int? get age => _age;
 
   // Getter for _genre
   String get genre => _genre;
 
   // Setter for _age if needed
-  set age(int value) {
+  set age(int? value) {
     _age = value;
   }
 
   // Method to print details about the artist
   void havetype() {
-    print('$_name, who is $_age years old, has a music genre of $_genre.');
+    if (_age != null) {
+      print('$_name, who is $_age years old, has a music genre of $_genre.');
+    } else {
+      print('$_name, whose age is unknown, has a music genre of $_genre.');
+    }
   }
 
   // Method to print the favorite song
